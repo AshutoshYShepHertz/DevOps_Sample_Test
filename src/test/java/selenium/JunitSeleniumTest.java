@@ -25,8 +25,7 @@ public class JunitSeleniumTest {
                                 DesiredCapabilities.firefox());
         
         driver.get("http://www.google.com");
-		System.out.println(driver.get("http://www.google.com"));
-       
+        
         
         // RemoteWebDriver does not implement the TakesScreenshot class
         // if the driver does have the Capabilities to take a screenshot
@@ -35,8 +34,9 @@ public class JunitSeleniumTest {
         File screenshot = ((TakesScreenshot)augmentedDriver).
                             getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(screenshot, new File("/home/paasadmin/testimage.png"));
-        Assert.assertEquals("Google", "Google");
+        Assert.assertEquals("True", "True");
 		System.out.println("Selenium Test Successfull");
+		System.out.println(driver.getTitle());
         
     }
 	@Test
