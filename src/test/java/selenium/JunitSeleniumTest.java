@@ -34,7 +34,7 @@ public class JunitSeleniumTest {
         File screenshot = ((TakesScreenshot)augmentedDriver).
                             getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(screenshot, new File("/home/paasadmin/testimage.png"));
-        Assert.assertEquals("True", "True");
+        Assert.assertEquals(driver.getTitle(), "App42 Sample Java-MySql Application");
 		System.out.println("Selenium Test Successfull");
 		System.out.println(driver.getTitle());
         
